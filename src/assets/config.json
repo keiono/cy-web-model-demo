@@ -1,0 +1,8 @@
+{
+    "defaultServer": {
+        "url": "http://localhost:3000"
+    },
+    "options": {
+        "debug": true
+    }
+}
