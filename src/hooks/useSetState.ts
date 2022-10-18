@@ -1,7 +1,7 @@
-import { StoreContext } from '../StoreContext'
 import { useContext } from 'react'
 import { Store } from '../store/Store'
-import { State } from '../State'
+import { State } from '../states/State'
+import { StoreContext } from '../contexts/StoreContext'
 
 export const useSetState = () => {
   const store: Store<State> = useContext(StoreContext)

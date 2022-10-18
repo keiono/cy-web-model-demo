@@ -1,12 +1,13 @@
-import { useMemo, useContext } from 'react'
+import { useMemo, useContext, Context } from 'react'
 import { useSubscription } from 'use-subscription'
-import { StoreContext } from '../StoreContext'
-import { State } from '../State'
+import { Store } from '../store/Store'
 
-export const useSelector = <S extends unknown>(
-  selector: (state: State) => S,
+export const useSelector = <S extends unknown, T extends unknown>(
+  selector: (state: T) => S,
+  context: Context<Store<T>>
 ) => {
-  const store = useContext(StoreContext)
+  const store = useContext(context)
+  
   return useSubscription(
     useMemo(
       () => ({

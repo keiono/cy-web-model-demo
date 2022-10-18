@@ -1,8 +1,8 @@
 import { ReactNode, useRef } from 'react'
 import { createStore } from './createStore'
 import { Store } from './store/Store'
-import { State } from './State'
-import { StoreContext } from './StoreContext'
+import { State } from './states/State'
+import { StoreContext } from './contexts/StoreContext'
 
 export const StoreProvider = ({
   initialState,

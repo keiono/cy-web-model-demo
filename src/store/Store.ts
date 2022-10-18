@@ -6,6 +6,6 @@
  */
 export interface Store<T> {
   getState: () => T
-  setState: (action: T | ((prev: T) => T)) => void
+  setState: (action: T | ((last: T) => T)) => void
   subscribe: (callback: () => void) => () => void
 }
